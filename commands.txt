@@ -7,3 +7,7 @@ mv ZeroNet-master/ zeronet
 cd zeronet
 screen
 python zeronet.py --ui_ip "*"
+
+OR
+
+python zeronet.py --tor disable --proxy 127.0.0.1:9050 --disable_udp --ui_ip "*"
