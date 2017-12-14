@@ -20,7 +20,7 @@ wget https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz
 tar -xzvf master.tar.gz
 cd ZeroNet-master
 
-# Run Tor and ZN -- Tor doesn't work yet... need to do something
+# Run Tor and ZN -- Tor doesn't work yet... need to do something -- might have to make the file, so run "sudo vim /usr/local/etc/tor/torrc" and "chmod 777 torrc"
 screen
 #/etc/init.d/tor restart #not installed in /etc/init.d if used used above Tor installation method
 tor
