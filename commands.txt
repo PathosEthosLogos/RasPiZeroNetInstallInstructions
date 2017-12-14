@@ -7,7 +7,7 @@ sudo pip install msgpack-python --upgrade
 # Pre req for Tor
 sudo apt-get install libevent-dev
 
-# Tor
+# Install Tor
 wget https://www.torproject.org/dist/tor-0.3.1.9.tar.gz
 tar -zxvf tor-0.3.1.9.tar.gz
 cd tor-0.3.1.9
@@ -20,9 +20,13 @@ wget https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz
 tar -xzvf master.tar.gz
 cd ZeroNet-master
 screen
+
+# Run Tor and ZN
+/etc/init.d/tor restart
 python zeronet.py --ui_ip "*"
 
-vim /etc/rc.local
+# You don't need this block if you already have /etc/init.d/tor that exists
+# vim /etc/rc.local
 # Add this command:
 # /home/pi/ZeroNet-master/python zeronet.py --ui_ip "*" &
 # The ampersand makes it run in the background
