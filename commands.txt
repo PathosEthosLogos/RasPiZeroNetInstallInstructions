@@ -5,7 +5,7 @@ wget https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz
 tar -xzvf master.tar.gz
 mv ZeroNet-master/ zeronet
 cd zeronet
-screen
+
 
 *For option 2, include this block
 apt-get update
@@ -15,6 +15,10 @@ vim /etc/tor/torrc
 usermod -a -G debian-tor pi
 /etc/init.d/tor restart
 
+
+
+
+screen
 
 * Option 1
 python zeronet.py --ui_ip "*"
