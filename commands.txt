@@ -19,10 +19,13 @@ sudo make install
 wget https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz
 tar -xzvf master.tar.gz
 cd ZeroNet-master
-screen
 
-# Run Tor and ZN
-/etc/init.d/tor restart
+# Run Tor and ZN -- Tor doesn't work yet... need to do something
+screen
+#/etc/init.d/tor restart #not installed in /etc/init.d if used used above Tor installation method
+tor
+# Press ctrl+A then D to detach from screen
+screen
 python zeronet.py --ui_ip "*"
 
 # You don't need this block if you already have /etc/init.d/tor that exists
