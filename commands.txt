@@ -6,8 +6,18 @@ tar -xzvf master.tar.gz
 mv ZeroNet-master/ zeronet
 cd zeronet
 screen
+
+*For option 2, include this block
+apt-get update
+apt-get install tor
+vim /etc/tor/torrc
+*Remove the # character from lines ControlPort 9051 and CookieAuthentication 1 (line ~57)
+usermod -a -G debian-tor pi
+/etc/init.d/tor restart
+
+
+* Option 1
 python zeronet.py --ui_ip "*"
 
-OR
-
+* Option 2 -- trying for Tor, lose ability to talk with other .onion addresses
 python zeronet.py --tor disable --proxy 127.0.0.1:9050 --disable_udp --ui_ip "*"
