@@ -1,0 +1,8 @@
+sudo apt-get install python-dev python-pip
+sudo pip install gevent --upgrade
+sudo pip install msgpack-python --upgrade
+wget https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz
+tar -xzvf master.tar.gz
+cd ZeroNet-master
+screen
+python zeronet.py --ui_ip "*"
